@@ -1,0 +1,48 @@
+const concerns = [
+  { label: 'Distributed Behavior', icon: '⟐' },
+  { label: 'State Management', icon: '⊡' },
+  { label: 'Interaction Patterns', icon: '⟁' },
+  { label: 'Data Models', icon: '⊞' },
+  { label: 'Messaging', icon: '⟿' },
+  { label: 'Orchestration', icon: '⊛' },
+  { label: 'Scale', icon: '⟐' },
+  { label: 'Evolution', icon: '⟳' },
+]
+
+export default function WhyCodeIsNotEnough() {
+  return (
+    <section className="py-32 px-6 border-t border-border">
+      <div className="max-w-4xl mx-auto">
+        <p className="text-sm font-mono tracking-widest uppercase text-muted mb-4">The Insight</p>
+        <h2 className="text-3xl sm:text-4xl font-bold text-[#e6eaf2] mb-6 tracking-tight">
+          Enterprises are not built out of code.
+        </h2>
+        <p className="text-xl text-[#9aa3b2] mb-16 max-w-2xl">
+          They are built out of <span className="text-[#e6eaf2]">systems</span>. Systems involve concerns
+          that no code generator can address in isolation.
+        </p>
+
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+          {concerns.map(({ label, icon }) => (
+            <div key={label}
+              className="group p-5 rounded-xl border border-border bg-surface/50 hover:border-border transition-all">
+              <span className="text-2xl text-[#9aa3b2]/40 group-hover:text-gold/60 transition-colors block mb-3 font-mono">
+                {icon}
+              </span>
+              <span className="text-sm text-[#e6eaf2]/80 font-medium">{label}</span>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-16 p-8 rounded-2xl border border-border bg-surface/30 text-center">
+          <p className="text-lg text-[#9aa3b2]">
+            Better code, but the same system design bottleneck.
+          </p>
+          <p className="text-xl text-[#e6eaf2] mt-3 font-medium">
+            The real problem is not code generation. It is <span className="text-gold">system creation</span>.
+          </p>
+        </div>
+      </div>
+    </section>
+  )
+}
