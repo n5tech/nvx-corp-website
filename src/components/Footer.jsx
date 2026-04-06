@@ -1,4 +1,4 @@
-export default function Footer() {
+export default function Footer({ onContact }) {
   return (
     <footer id="contact" className="border-t border-border">
       {/* Closing statement */}
@@ -13,10 +13,10 @@ export default function Footer() {
             <p><span className="text-[#5aadb1]">Rumi</span> turns system design into running systems.</p>
             <p className="text-[#e6eaf2] font-medium mt-3">N5 turns enterprise intent into running systems.</p>
           </div>
-          <a href="mailto:hello@n5technologies.com"
-            className="inline-flex mt-12 px-8 py-3.5 rounded-lg bg-accent text-[#e6eaf2] font-medium hover:bg-accent-light transition-all">
+          <button onClick={onContact}
+            className="inline-flex mt-12 px-8 py-3.5 rounded-lg bg-accent text-[#e6eaf2] font-medium hover:bg-accent-light transition-all cursor-pointer">
             Talk to Us
-          </a>
+          </button>
         </div>
       </div>
 

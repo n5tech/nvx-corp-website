@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import Nav from './components/Nav'
 import Hero from './components/Hero'
 import TheShift from './components/TheShift'
@@ -8,11 +9,15 @@ import WhyThisMatters from './components/WhyThisMatters'
 import ForEnterprises from './components/ForEnterprises'
 import Credibility from './components/Credibility'
 import Footer from './components/Footer'
+import ContactForm from './components/ContactForm'
 
 export default function App() {
+  const [contactOpen, setContactOpen] = useState(false)
+  const openContact = () => setContactOpen(true)
+
   return (
     <>
-      <Nav />
+      <Nav onContact={openContact} />
       <main>
         <Hero />
         <TheShift />
@@ -23,7 +28,8 @@ export default function App() {
         <ForEnterprises />
         <Credibility />
       </main>
-      <Footer />
+      <Footer onContact={openContact} />
+      <ContactForm open={contactOpen} onClose={() => setContactOpen(false)} />
     </>
   )
 }
