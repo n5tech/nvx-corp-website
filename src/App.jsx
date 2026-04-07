@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Nav from './components/Nav'
 import Hero from './components/Hero'
 import TheShift from './components/TheShift'
@@ -10,14 +11,11 @@ import ForEnterprises from './components/ForEnterprises'
 import Credibility from './components/Credibility'
 import Footer from './components/Footer'
 import ContactForm from './components/ContactForm'
+import Legal from './components/Legal'
 
-export default function App() {
-  const [contactOpen, setContactOpen] = useState(false)
-  const openContact = () => setContactOpen(true)
-
+function HomePage({ openContact }) {
   return (
     <>
-      <Nav onContact={openContact} />
       <main>
         <Hero />
         <TheShift />
@@ -29,7 +27,22 @@ export default function App() {
         <Credibility />
       </main>
       <Footer onContact={openContact} />
-      <ContactForm open={contactOpen} onClose={() => setContactOpen(false)} />
     </>
+  )
+}
+
+export default function App() {
+  const [contactOpen, setContactOpen] = useState(false)
+  const openContact = () => setContactOpen(true)
+
+  return (
+    <BrowserRouter>
+      <Nav onContact={openContact} />
+      <Routes>
+        <Route path="/" element={<HomePage openContact={openContact} />} />
+        <Route path="/legal" element={<Legal />} />
+      </Routes>
+      <ContactForm open={contactOpen} onClose={() => setContactOpen(false)} />
+    </BrowserRouter>
   )
 }

@@ -22,9 +22,9 @@ export default function Footer({ onContact }) {
 
       {/* Bottom bar */}
       <div className="border-t border-border px-6 py-6">
-        <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-muted">
-          <span className="font-medium text-[#9aa3b2]">N5 Technologies</span>
-          <span>&copy; {new Date().getFullYear()} N5 Technologies. All rights reserved.</span>
+        <div className="max-w-6xl mx-auto flex items-center justify-between text-sm text-muted">
+          <a href="/legal" className="hover:text-[#e6eaf2] transition-colors">Legal &amp; Privacy</a>
+          <span className="text-xs">&copy; {new Date().getFullYear()} N5 Technologies, Inc. All rights reserved.</span>
         </div>
       </div>
     </footer>
