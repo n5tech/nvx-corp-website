@@ -1,23 +1,23 @@
 const steps = [
   {
     num: '01',
-    title: 'Describe enterprise intent',
+    title: 'Describe Enterprise Intent',
     desc: 'Capture processes, constraints, roles, and opportunities in natural language. No formal specification required.',
   },
   {
     num: '02',
     title: 'Refine in Sutra',
-    desc: 'Through interactive dialogue, Sutra structures your intent into agents, state boundaries, data models, and messaging flows.',
+    desc: 'Through interactive dialogue, Sutra structures intent into agents, state boundaries, data models, and messaging flows.',
   },
   {
     num: '03',
-    title: 'Compile the system',
-    desc: 'Sutra compiles structured design into coherent system definitions — not code fragments, but complete system architecture.',
+    title: 'Compile the System',
+    desc: 'Sutra compiles structured design into coherent system definitions. Not code fragments, but complete system architecture.',
   },
   {
     num: '04',
     title: 'Run on Rumi',
-    desc: 'Rumi executes the compiled system with distributed state, exactly-once processing, and enterprise-grade reliability.',
+    desc: 'Rumi executes the system with distributed state, exactly-once processing, and enterprise-grade reliability.',
   },
 ]
 
@@ -28,7 +28,7 @@ export default function HowItWorks() {
         <div className="text-center mb-20">
           <p className="text-sm font-mono tracking-widest uppercase text-muted mb-4">How It Works</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-[#e6eaf2] mb-6 tracking-tight">
-            From intent to execution
+            From Intent to Execution
           </h2>
           <p className="text-lg text-[#9aa3b2] max-w-2xl mx-auto">
             Four steps. No hand-written plumbing. No architecture guesswork.

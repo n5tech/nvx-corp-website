@@ -1,11 +1,11 @@
 const principles = [
-  'Stateful systems',
-  'Distributed data models',
-  'Message-passing architecture',
-  'Deterministic execution',
-  'Exactly-once processing',
-  'Scalability through partitioning',
-  'Recipe-driven construction',
+  'Stateful Systems',
+  'Distributed Data Models',
+  'Message-Passing Architecture',
+  'Deterministic Execution',
+  'Exactly-Once Processing',
+  'Partitioned Scalability',
+  'Recipe-Driven Construction',
 ]
 
 export default function Credibility() {
@@ -20,14 +20,13 @@ export default function Credibility() {
               An execution substrate.
             </h2>
             <p className="text-[#9aa3b2] leading-relaxed mb-8">
-              Rumi is a purpose-built runtime for enterprise systems. Sutra + Rumi together
-              encode <span className="text-[#e6eaf2]">system patterns</span> — not just syntax — and generate
-              coherent systems, not fragments of code.
+              Rumi is a purpose-built runtime for enterprise systems. Sutra and Rumi together
+              encode system patterns, not just syntax, and produce coherent systems, not fragments of code.
             </p>
             <div className="p-6 rounded-xl border border-border bg-surface/50">
               <p className="text-sm text-muted mb-1 font-mono">The relationship</p>
               <p className="text-[#9aa3b2] text-sm leading-relaxed">
-                <span className="text-[#c09b2d]">Re:Config</span> identifies where AI should exist.{' '}
+                Enterprise intent defines what needs to be built.{' '}
                 <span className="text-[#7b93cc]">Sutra</span> structures the system.{' '}
                 <span className="text-[#5aadb1]">Rumi</span> runs it.
               </p>

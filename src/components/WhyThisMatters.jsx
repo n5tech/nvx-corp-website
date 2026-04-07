@@ -1,11 +1,11 @@
 const benefits = [
   {
     title: 'Faster path to production',
-    desc: 'Skip months of system design and plumbing. Go from intent to running infrastructure.',
+    desc: 'Skip months of system design and plumbing. Move from intent to running systems.',
   },
   {
     title: 'Coherent architecture',
-    desc: 'Systems compiled from structured design, not stitched together from code fragments.',
+    desc: 'Systems are compiled from structured design, not stitched together from code fragments.',
   },
   {
     title: 'Scalable execution',
@@ -13,7 +13,7 @@ const benefits = [
   },
   {
     title: 'Continuous evolution',
-    desc: 'Systems evolve through intent refinement, not rewrites. Change the description, recompile the system.',
+    desc: 'Systems evolve through intent refinement, not rewrites. Change the description and recompile the system.',
   },
 ]
 
