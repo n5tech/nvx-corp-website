@@ -4,24 +4,24 @@ const layers = [
     label: 'Intent Layer',
     tagline: 'Describe the enterprise',
     color: 'intent',
-    description: 'Enterprise intent from business analysis, consulting workflows, or system discovery platforms. Processes, constraints, roles, inefficiencies, and opportunities — captured as ambiguous, human-readable intent.',
-    outputs: ['Processes & workflows', 'Constraints & rules', 'Roles & responsibilities', 'AI/system opportunities'],
+    description: 'Enterprise intent emerges from business analysis, consulting workflows, or system discovery platforms. It captures processes, constraints, roles, inefficiencies, and opportunities as ambiguous, human-readable input.',
+    outputs: ['Processes & Workflows', 'Constraints & Rules', 'Roles & Responsibilities', 'Opportunities for AI & Systems'],
   },
   {
     id: 'sutra',
     label: 'Sutra',
-    tagline: 'Design and compile systems',
+    tagline: 'Design and Structure Systems',
     color: 'sutra',
-    description: 'Sutra is our system design and compilation layer. It takes enterprise intent, refines it into structured system design through interactive dialogue — not blind code generation, but design through conversation.',
-    outputs: ['Agents & services', 'State boundaries', 'Data models & schemas', 'Messaging flows'],
+    description: 'Sutra is our system design and compilation layer. It takes enterprise intent and refines it into structured system design through interactive dialogue. This is not code generation. It is system design through conversation.',
+    outputs: ['Agents & Services', 'State Boundaries', 'Data Models & Schemas', 'Messaging & Interaction Flows', 'System Architecture'],
   },
   {
     id: 'rumi',
     label: 'Rumi',
-    tagline: 'Execute and run systems',
+    tagline: 'Run and Scale Systems',
     color: 'rumi',
-    description: 'Rumi is our execution layer. Built for distributed systems, stateful architectures, real-time execution, and enterprise-grade reliability. It handles state, messaging, scaling, consistency, and performance.',
-    outputs: ['Distributed execution', 'Stateful processing', 'Real-time messaging', 'Enterprise-grade scale'],
+    description: 'Rumi is our execution layer. It runs distributed, stateful systems in real time with enterprise-grade reliability. It handles state, messaging, scaling, consistency, and high performance.',
+    outputs: ['Microservice Execution', 'Stateful Processing', 'Real-Time Messaging', 'Fault Tolerance & Reliability', 'Elastic Scale', 'High Performance'],
   },
 ]
 
@@ -59,11 +59,11 @@ export default function TheStack() {
         <div className="text-center mb-20">
           <p className="text-sm font-mono tracking-widest uppercase text-muted mb-4">The N5 Stack</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-[#e6eaf2] mb-6 tracking-tight">
-            Three layers. One system.
+            Three Layers. One Architecture.
           </h2>
           <p className="text-lg text-[#9aa3b2] max-w-2xl mx-auto">
-            From ambiguous enterprise intent to deterministic, running systems —
-            each layer transforms and refines.
+            From enterprise intent to running systems.<br />
+            Each layer adds structure and brings the system closer to execution.
           </p>
         </div>
 

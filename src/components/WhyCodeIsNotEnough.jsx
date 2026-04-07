@@ -15,12 +15,15 @@ export default function WhyCodeIsNotEnough() {
       <div className="max-w-4xl mx-auto">
         <p className="text-sm font-mono tracking-widest uppercase text-muted mb-4">The Insight</p>
         <h2 className="text-3xl sm:text-4xl font-bold text-[#e6eaf2] mb-6 tracking-tight">
-          Enterprises are not built out of code.
+          Enterprises Are Not Built Out of Code<br />
+          <span className="text-[#9aa3b2]">They Are Built Out of <span className="text-gold">Systems</span></span>
         </h2>
-        <p className="text-xl text-[#9aa3b2] mb-16 max-w-2xl">
-          They are built out of <span className="text-[#e6eaf2]">systems</span>. Systems involve concerns
-          that no code generator can address in isolation.
+
+        <p className="text-lg text-[#9aa3b2] mb-16">
+          These include behavior, state, and interactions that code alone cannot define.
         </p>
+
+        <p className="text-sm text-muted font-mono uppercase tracking-widest mb-6">Real systems require:</p>
 
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
           {concerns.map(({ label, icon }) => (
@@ -36,7 +39,7 @@ export default function WhyCodeIsNotEnough() {
 
         <div className="mt-16 p-8 rounded-2xl border border-border bg-surface/30 text-center">
           <p className="text-lg text-[#9aa3b2]">
-            Better code, but the same system design bottleneck.
+            Better code. The same system design bottleneck.
           </p>
           <p className="text-xl text-[#e6eaf2] mt-3 font-medium">
             The real problem is not code generation. It is <span className="text-gold">system creation</span>.
