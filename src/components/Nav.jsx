@@ -16,7 +16,7 @@ export default function Nav({ onContact }) {
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         <div className="flex items-center gap-8">
           <a href="#" className="flex items-center">
-            <img src="/n5-logo.png" alt="N5" className="h-18" />
+            <img src="/n5-logo.png" alt="N5" className="h-[52px]" />
           </a>
           <div className="hidden md:flex items-center gap-8 text-[15px] text-muted">
             <a href="#shift" className="hover:text-[#e6eaf2] transition-colors">The Shift</a>
