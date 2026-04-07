@@ -1,16 +1,78 @@
-# React + Vite
+# N5 Technologies — Corporate Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The system compiler for AI-native enterprises. Built with React, Vite, and Tailwind CSS.
 
-Currently, two official plugins are available:
+## Local Development
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+```bash
+npm install
+npm run dev
+```
 
-## React Compiler
+Opens at http://localhost:5173
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Build
 
-## Expanding the ESLint configuration
+```bash
+npm run build
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Output goes to `dist/`.
+
+## Deploy via GitHub Pages
+
+1. Install the GitHub Pages plugin:
+
+```bash
+npm install -D gh-pages
+```
+
+2. Add to `package.json` scripts:
+
+```json
+"predeploy": "npm run build",
+"deploy": "gh-pages -d dist"
+```
+
+3. Set the base URL in `vite.config.js`:
+
+```js
+export default defineConfig({
+  base: '/nvx-corp-website/',
+  plugins: [react(), tailwindcss()],
+})
+```
+
+4. Deploy:
+
+```bash
+npm run deploy
+```
+
+5. In GitHub repo settings, go to **Pages** and set source to the `gh-pages` branch.
+
+The site will be live at `https://n5tech.github.io/nvx-corp-website/`
+
+## Deploy via Vercel (Recommended)
+
+The simplest option — zero config for Vite projects.
+
+1. Go to [vercel.com](https://vercel.com) and sign in with GitHub
+2. Click **Add New Project** and import `n5tech/nvx-corp-website`
+3. Vercel auto-detects Vite — click **Deploy**
+4. Optionally connect a custom domain (e.g. `n5technologies.com`) in project settings
+
+Every push to `main` auto-deploys.
+
+## Deploy via Netlify
+
+1. Go to [netlify.com](https://netlify.com) and sign in with GitHub
+2. Click **Add new site > Import an existing project**
+3. Select `n5tech/nvx-corp-website`
+4. Build settings are auto-detected:
+   - Build command: `npm run build`
+   - Publish directory: `dist`
+5. Click **Deploy site**
+6. Optionally connect a custom domain in site settings
+
+Every push to `main` auto-deploys.
