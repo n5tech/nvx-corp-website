@@ -222,7 +222,19 @@ The data is defined as a plain array of objects at the top of the file. No API c
 
 **Vercel** auto-deploys from the `main` branch on GitHub. The repository is `n5tech/nvx-corp-website`.
 
-Vercel detects Vite projects automatically -- no build configuration needed. It runs `npm run build` (which runs `vite build`), serves the `dist/` directory, and handles SPA routing via its default fallback behavior.
+Vercel detects Vite projects automatically -- no build configuration needed. It runs `npm run build` (which runs `vite build`) and serves the `dist/` directory.
+
+**SPA routing requires `vercel.json`.** Unlike Next.js or CRA, Vercel does *not* automatically fall back to `index.html` for client-side routes in Vite projects. Without a rewrite rule, direct navigation to `/legal` (or any route refresh) returns 404. The fix is a one-file `vercel.json` at the repo root:
+
+```json
+{
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/" }
+  ]
+}
+```
+
+This rewrites all paths to `/` so `BrowserRouter` can resolve the route client-side.
 
 ---
 
@@ -244,7 +256,7 @@ Vercel detects Vite projects automatically -- no build configuration needed. It 
 
 3. **Color opacity in Tailwind v4.** The syntax `bg-gold/20` (20% opacity) works with `@theme` variables. But some complex opacity patterns like `bg-[#c09b2d]/[0.03]` require the bracket syntax. Know when to use which.
 
-4. **SPA routing on Vercel.** Vercel handles this by default for Vite projects, but if you ever move to a different host, you'll need to configure a fallback to `index.html` for the `/legal` route to work on direct navigation.
+4. **SPA routing on Vercel.** Vercel does NOT auto-fall-back to `index.html` for Vite projects — that auto-behavior is specific to Next.js/CRA. Without `vercel.json`, `/legal` returns 404 on direct navigation or refresh. See the Deployment section for the required rewrite config. If you ever move to another host (Netlify, Cloudflare Pages, etc.), you'll need the equivalent fallback rule there too.
 
 ### How Good Engineers Think About This
 
